@@ -1,6 +1,12 @@
     {
     "title": "NYPL Menus",
     "profile": "tabular-data-package",
+    "created": "2018-02-11T18:00:22",
+    "version": "7.1.4",
+    "sources" : [{
+        "title": "NYPL What/'s on the Menu? Data Exports",
+        "path": "https://s3.amazonaws.com/menusdata.nypl.org/gzips/2018_02_01_07_01_04_data.tgz"
+        }],
     "resources": [
         {
             "path": "https://s3.amazonaws.com/menusdata.nypl.org/gzips/2018_02_01_07_01_04_data.tgz#Dish.csv",

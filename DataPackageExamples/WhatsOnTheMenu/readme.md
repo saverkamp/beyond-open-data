@@ -4,4 +4,4 @@
 
 The metadata and documentation included in the data package example here come from information on the project website, conversations with former project staff, and the extensive investigations, analysis, and documentation of the data and project by Katie Rawson and Trevor Muñoz in their [_Curating Menus_](http://curatingmenus.org/) project.  
 
-[Preview the data package]() for the _What's on the Menu_ data.   
+[Preview the data package](http://data.okfn.org/tools/view?url=https%3A%2F%2Fgithub.com%2Fsaverkamp%2Fbeyond-open-data%2Fraw%2Fmaster%2FDataPackageExamples%2FWhatsOnTheMenu%2Fdatapackage.json) for the _What's on the Menu_ data.   
