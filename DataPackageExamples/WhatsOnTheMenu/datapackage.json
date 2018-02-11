@@ -1,0 +1,572 @@
+    {
+    "title": "NYPL Menus",
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "https://s3.amazonaws.com/menusdata.nypl.org/gzips/2018_02_01_07_01_04_data.tgz#Dish.csv",
+            "encoding": "utf-8",
+            "schema": {
+                "missingValues": [
+                    "0",
+                    "0.00",
+                    ""
+                ],
+                "fields": [
+                    {
+                        "type": "integer",
+                        "name": "id",
+                        "description": "The database identifier of the dish.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "name": "name",
+                        "description": "The name of the dish as transcribed from menu(s).",
+                        "source": "volunteer transcribers",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "name": "description",
+                        "description": "Not used.",
+                        "source": "not applicable",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "name": "menus_appeared",
+                        "description": "Number of menus where the dish has appeared by this name.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "name": "times_appeared",
+                        "description": "Number of times this dish appears by this name across all menus.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }                       
+                    },
+                    {
+                        "type": "integer",
+                        "name": "first_appeared",
+                        "description": "The year of the menu where the dish first appeared.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        } 
+                    },
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "last_appeared",
+                        "source": "web application",
+                        "description": "The year of the menu where the dish last appeared.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        } 
+                    },
+                    {
+                        "type": "number",
+                        "name": "lowest_price",
+                        "description": "The lowest recorded price of the dish in decimals for US dollar currency. Non-dollar based dishes will be null.",
+                        "source": "volunteer transcribers",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }                        
+                    },
+                    {
+                        "type": "number",
+                        "name": "highest_price",
+                        "description": "The recorded price of the dish in decimals for US dollar currency. Non-dollar based dishes will be null.",
+                        "source": "volunteer transcribers",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }                        
+                    }
+                ]
+            },
+            "name": "Dish",
+            "description": "A dish represents a transciption of a menu selection that may appear on one or more menus. Dishes are grouped by their exact transcription, so, for instance, 'Macaroni Bolognese' will appear as a separate dish than 'Maccaroni Bolognese.' Each dish includes the number of menus where it appears, the number of times it appears across all menues, the first and last years for the menus where it appears, and the highest and lowest prices for the dish.",
+            "profile": "tabular-data-resource",
+            "format": "csv",
+            "mediatype": "text/csv"
+        },
+        {
+            "path": "https://s3.amazonaws.com/menusdata.nypl.org/gzips/2018_02_01_07_01_04_data.tgz#Menu.csv",
+            "encoding": "utf-8",
+            "schema": {
+                "missingValues": [
+                    ""
+                ],
+                "primaryKey": "id",
+                "fields": [
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "id",
+                        "description": "The database identifier of the menu.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "name",
+                        "description": "The name of the restaurant, venue, organization, or event hosting the meal. (Not reliable populated. Frequently duplicates data found in 'sponsor.'",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "sponsor",
+                        "description": "The name of the restaurant, venue, organization, or event hosting the meal.",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "event",
+                        "description": "The transcribed event, occasion, or type of meal the menu was prepared for. Information in this field varies widely.",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "venue",
+                        "description": "The type of place. Information in this field varies widely.",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "place",
+                        "description": "A free text location for the restaurant or event. May include street addresses, landmarks, cities, neighborhoods, or concepts (ex. '(AT SEA).'",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "physical_description",
+                        "description": "Includes information on the format, medium, dimensions, illustrations, and condition of the menu.",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "occasion",
+                        "description": "A transcribed occasion for which the menu was created.",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "notes",
+                        "description": "Transcribed text from a menu that does not fit into another field.",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "call_number",
+                        "description": "The Library's call number for the menu",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "keywords",
+                        "description": "Not used.",
+                        "source": "not applicable",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "language",
+                        "description": "Not used.",
+                        "source": "not applicable",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "date",
+                        "format": "default",
+                        "name": "date",
+                        "description": "Date found on the menu in yyyy-mm-dd format.",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "location",
+                        "description": "The address, restaurant, or title of the menu.",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "location_type",
+                        "description": "Not used.",
+                        "source": "not applicable",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "currency",
+                        "description": "The currency in which prices are listed. Values come from a controlled vocabulary.",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "currency_symbol",
+                        "description": "The currency symbol used for prices.",
+                        "source": "NYPL metadata",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "status",
+                        "description": "The transcription status of the menu, 'complete', 'under review', or ''.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "page_count",
+                        "description": "The number of digitized pages in the menu",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "dish_count",
+                        "source": "web application",
+                        "description": "The number of dishes listed on the menu",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    }
+                ]
+            },
+            "name": "Menu",
+            "description": "A menu digitized from one of NYPL's menu collections.",
+            "profile": "tabular-data-resource",
+            "format": "csv",
+            "mediatype": "text/csv"
+        },
+        {
+            "path": "https://s3.amazonaws.com/menusdata.nypl.org/gzips/2018_02_01_07_01_04_data.tgz#MenuItem.csv",
+            "encoding": "utf-8",
+            "schema": {
+                "missingValues": [
+                    ""
+                ],
+                "fields": [
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "id",
+                        "description": "The database identifier for a menu item transcribed from a menu.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "menu_page_id",
+                        "description": "The database identifier for the page where the menu item appears.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "price",
+                        "description": "The currency in which prices are listed. Values come from a controlled vocabulary.",
+                        "source": "volunteer transcribers",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "high_price",
+                        "description": "The highest price of the menu item on the menu, if there is more than one price listed.",
+                        "source": "volunteer transcribers",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "dish_id",
+                        "description": "The database identifier of the dish the menu item references.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "created_at",
+                        "description": "The datetime of first transcription.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "updated_at",
+                        "description": "The datetime the transcription was last updated.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "number",
+                        "format": "default",
+                        "name": "xpos",
+                        "description": "Horizontal coordinate on the page for the upper left point of the menu item.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "number",
+                        "format": "default",
+                        "name": "ypos",
+                        "description": "Vertical coordinate on the page for the upper left point of the menu item.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    }
+                ]
+            },
+            "name": "MenuItem",
+            "description": "An item transcribed from a menu.",
+            "profile": "tabular-data-resource",
+            "format": "csv",
+            "mediatype": "text/csv"
+        },
+        {
+            "path": "https://s3.amazonaws.com/menusdata.nypl.org/gzips/2018_02_01_07_01_04_data.tgz#MenuPage.csv",
+            "encoding": "utf-8",
+            "schema": {
+                "missingValues": [
+                    "0",
+                    "0.00",
+                    ""
+                ]   ,
+                "fields": [
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "id",
+                        "description": "The database identifier for a page image from a menu.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "menu_id",
+                        "description": "The database identifier for the menu.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "page_number",
+                        "description": "The page number of the page image within the menu.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "image_id",
+                        "description": "The image identifier for the page image in the digital repository.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "full_height",
+                        "description": "The height of the page image in pixels.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "format": "default",
+                        "name": "full_width",
+                        "description": "The width of the page image in pixels.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "default",
+                        "name": "uuid",
+                        "description": "The UUID of the page image in the library's digital repository.",
+                        "source": "web application",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        }
+                    }
+                ]
+            },
+            "name": "MenuPage",
+            "description": "A page image of a menu.",
+            "profile": "tabular-data-resource",
+            "format": "csv",
+            "mediatype": "text/csv"
+        }
+    ],
+    "name": "nypl-menus",
+    "description": "Crowdsourced metadata from NYPL What's on the Menu project. Data includes basic metadata for each menu and transcriptions of menu items and prices, restaurant or event names, locations, and dates. Menus are drawn from the New York Public Library menu collections. The collections, housed in the Rare Book Division, originated through the energetic efforts of Miss Frank E. Buttolph (1850-1924), who, in 1900, began to collect menus on the Library's behalf. Miss Buttolph added more than 25,000 menus to the collection, before leaving the Library in 1924. The collection has continued to grow through additional gifts of graphic, gastronomic, topical, or sociological interest, especially but not exclusively New York-related. The collection now contains approximately 45,000 items, about quarter of which have so far been digitized and made available in [Digital Collections](https://digitalcollections.nypl.org/). Menus in the project, however, are drawn from a number of digitized collections: [The Buttolph collection of menus](https://digitalcollections.nypl.org/collections/the-buttolph-collection-of-menus), [Soete menu collection](https://digitalcollections.nypl.org/collections/soete-menu-collection), [Baratta menu collection](https://digitalcollections.nypl.org/collections/baratta-menu-collection). Volunteers were invited to participate in transcribing names of dishes, prices, and locations from over 17,000 digitized menus held at NYPL's Rare Books Division, helping to create a resource for researchers, educators, chefs and other interested folks. The original metadata and the crowdsourced data generated from the project are available as four linked CSV files on the [project website](http://menus.nypl.org/data). Data is also available through a [public API](http://api.menus.nypl.org/). Data dumps are autoupdated every two weeks, and this data package reflects the version from 2018-02-01. The metadata and documentation included in the data package example here come from information on the project website, conversations with former project staff, and the extensive investigations, analysis, and documentation of the data and project by Katie Rawson and Trevor Muñoz in their [_Curating Menus_](http://curatingmenus.org/) project. Additional information about the menus and the collections is available through a [series of blog posts](https://www.nypl.org/voices/blogs/blog-channels/whats-on-the-menu) written by NYPL curators and project staff.",
+    "licenses": [
+        {
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "CC0 1.0",
+            "name": "CC0-1.0"
+        }
+    ],
+    "homepage": "http://menus.nypl.org/"
+}

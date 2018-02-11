@@ -1,0 +1,7 @@
+# What's on the Menu?
+
+[What's on the Menu?](http://menus.nypl.org/) was a menu transcription crowdsourcing project started in April 2011 by [NYPL Labs](https://www.nypl.org/collections/labs) at the New York Public Library. Volunteers were invited to participate in transcribing names of dishes, prices, and locations from over 17,000 digitized menus held at NYPL's Rare Books Division, helping to create a resource for researchers, educators, chefs and other interested folks. The original metadata and the crowdsourced data generated from the project are available as four linked CSV files on the [project website](http://menus.nypl.org/data). Data is also available through a [public API](http://api.menus.nypl.org/). Data dumps are autoupdated every two weeks, and this data package reflects the version from 2018-02-01.    
+
+The metadata and documentation included in the data package example here come from information on the project website, conversations with former project staff, and the extensive investigations, analysis, and documentation of the data and project by Katie Rawson and Trevor Muñoz in their [_Curating Menus_](http://curatingmenus.org/) project.  
+
+[Preview the data package]() for the _What's on the Menu_ data.   
