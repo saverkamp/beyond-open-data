@@ -56,13 +56,14 @@ class: center, middle
 # Experiments 
 
 ---
-# Experiments #1: Data creator + consumer
+# Experiments #1: LC/MARC
+# Data creator + consumer
 
-## LC/MARC   
+![](assets/images/lc-lists.gif)
 
 ???
 
-I'll start with a project Matt worked on, so I'll be representing him and his work here. Matt wanted to work with Library of Congress MARC data and think about how it could be released in a more broadly user-friendly data format. With the data available as a table, database, or CSV format, it would be easier for people to understand a dataset, and the data could be explored more easily. 
+I'll start with a project Matt worked on, so I'll be representing him and his work here. Matt wanted to work with Library of Congress's MARC data and think about how it could be released in a more broadly user-friendly data format. With the data available not as raw MARC but as a table, database, or CSV, it could be easier for people to understand a dataset, and the data could be explored more easily. 
 
 ---
 # Matt is great 
@@ -70,7 +71,7 @@ I'll start with a project Matt worked on, so I'll be representing him and his wo
 ![](assets/images/mm.png)
 ![](assets/images/mm2.png)
 
-??? 
+???
 
 BTW Matt is great, he's been doing a lot of interesting work with this data over the past few months since it was released, thank you Library of Congress for putting this data out there.
 
@@ -78,7 +79,11 @@ BTW Matt is great, he's been doing a lot of interesting work with this data over
 # Matt is great, part 2
 
 ![](assets/images/mm3.png)
-![](assets/images/lc-lists.gif)
+
+
+???
+
+Some more stuff you can find online. 
 
 ---
 class: middle, center
@@ -92,7 +97,7 @@ I feel like I didn't initially appreciate the work Matt had been doing in this d
 ---
 class: middle, center
 
-Installing Datasette:
+Installing Datasette:  
 ![](assets/images/datasette_install.gif)
 
 ???
@@ -109,9 +114,10 @@ class: middle, center
 Here's a gif of the result. The results are functional but Matt said the source data is maybe a little too big, 10million records, for proper use of this application. MARC data is complicated, but if you think about building your own database for a specific use case and releasing that as a data package, it makes thing much more manageable. Also, he says, this is a super cheap way of building an API. If you put indexes on everything you wanted and stay away from full text search you could totally setup some simple API endpoints for people to use.
 
 ---
-# Experiments #2: Data consumer
+# Experiments #2: PMA 
+# Data consumer
 
-## Philadelphia Museum of Art 
+.center[![](assets/images/pma.gif)]
 
 ???
 
