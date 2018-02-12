@@ -21,7 +21,8 @@ There are scripts for each database. This is nice because you can simply add fie
 
 The resulting files are SQLite DBs that you can use. In this case, for each database, the subjects and titles were 5GB each. 
 
-[ Potential links to the data, currently withheld ]
+https://s3.amazonaws.com/lc-sqlite/lc_books_subjects.db.gz (1.2GB)  
+https://s3.amazonaws.com/lc-sqlite/lc_books_titles.db.gz (2GB)  
 
 The next step is to work with the data. You can interact with it right on your computer using the sqlite3 command line tool and run queries, or write simple Python scripts to work with it, or use a tool like [Datasette](https://github.com/simonw/datasette) to make a web interface and API endpoint.
 
