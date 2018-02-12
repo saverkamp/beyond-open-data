@@ -20,3 +20,7 @@
 h1 {
   text-transform: uppercase;
 }
+
+.remark-container img {
+  max-width: 800px;
+}
