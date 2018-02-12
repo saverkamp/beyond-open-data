@@ -1,0 +1,220 @@
+{
+  "name": "womens-suffrage-collections-at-nypl-and-library-of-congress",
+  "id": "womens-suffrage-collections-at-nypl-and-library-of-congress",
+  "profile": "tabular-data-package",
+  "homepage": "https://github.com/saverkamp/loc-talk-2017/womens-suffrage-collections-data",
+  "title": "Women's suffrage collections at NYPL and Library of Congress",
+  "description": "This dataset was created for the sole purpose of illustrating how to explore and manipulate tabular data and to give an example of Frictionless Data data packages (http://frictionlessdata.io) at a talk and workshop at the Library of Congress on November 13. 2017. It contains descriptive metadata for digitized objects from two collections: The Schwimmer-Lloyd collection (Series V: Schwimmer-Lloyd photographs) from the New York Public Library Manuscripts and Archives Division and the National American Woman Suffrage Association Collection from the Library of Congress Rare Book Division.  \nThe NYPL collection includes selected photographs of feminists and suffragists from the papers of Rosika Schwimmer, from the Schwimmer-Lloyd Collection. The Schwimmer-Lloyd collection consists chiefly of the correspondence and papers of Rosika Schwimmer (1877-1948), her colleague Lola Maverick Lloyd (1875-1944), and the papers of their associates in the European and American feminist, international peace, and world government movements. A large selection of the featured photographs pertain to the International Woman Suffrage Alliance (IWSA) Congresses, with a particular focus on the 1913 Budapest Congress. Aletta Jacobs, Anita Augspurg and Lida Gustava Heymann conceived the IWSA at the International Council of Women conference in 1899. In 1902, the IWSA had its first meeting in Washington, D.C., corresponding with the conference of the National American Woman Suffrage Association. The first congress of the IWSA was held in 1904 in Berlin, with a stated object to \"secure enfranchisement for the women of all nations, and to unite the friends of woman suffrage throughout the world....\"  \nThe organization originally consisted of an alliance of national woman suffrage groups, from eight member, or \"affiliate\" countries, with an additional three countries represented by smaller, local groups. By the Budapest Congress of 1913, over which Carrie Chapman Catt presided as president, the IWSA counted twenty-five affiliates and added a twenty-sixth with the inclusion of China. It was also at this congress that an international IWSA headquarters were established at 7 Adam Street, Adelphi, London.  \nAt the congresses, in addition to regular items of business and social entertainments, delegates from each national affiliate delivered reports on their suffrage efforts, and on other concerns such as militancy and white slavery. Supplementing the congresses held every two years, the organization produced its own publication in English and in French, Jus Suffragii, from 1906 to 1916. The organization continued these activities, in addition to operating as a clearinghouse on women's issues worldwide, until 1923. After this point the IWSA became the International Alliance of Women for Suffrage and Equal Citizenship.  \nMore information about the collection is available from the collection finding aid (http://archives.nypl.org/2703) and the digital collection home page (https://digitalcollections.nypl.org/collections/schwimmer-lloyd-collection#about)  \nThe National American Woman Suffrage Association (NAWSA) Collection is a library of nearly 800 books and pamphlets documenting the suffrage campaign. They were collected between 1890 and 1938 by members of NAWSA and donated to the Rare Books Division of the Library of Congress on November 1, 1938. The bulk of the collection is derived from the library of Carrie Chapman Catt, president of NAWSA from 1900-1904, and again from 1915-1920. Additional materials were donated to the NAWSA Collection from the libraries of other members and officers, including Elizabeth Cady Stanton, Susan B. Anthony, Lucy Stone, Alice Stone Blackwell, Julia Ward Howe, Elizabeth Smith Miller, and Mary A. Livermore.  \nThe complete collection consists of a variety of materials--newspapers, books, pamphlets, memorials, scrapbooks, and proceedings from the meetings of various women's organizations--documenting the suffrage fight. When the Library of Congress acquired the collection from Carrie Chapman Catt in 1938, it was divided into sixteen sections, with individual items being assigned both an accession number and an item number within its particular section. The sixteen sections are as follows:  \n1. Reliable Sources on the Woman Movement \n2. Brief Biographies\n3. Woman and Work\n4. Women and War\n5. Sociology and Ethics concerning Women\n6. The Evolution of Woman \n7. The Woman Suffrage Campaign \n8. Biographies of Women \n9. Women and the Law \n10. Parenthood and Related Subjects \n11. Prostitution \n12. Women and Costumology \n13. Women and Clubs \n14. Letters, Poems, Novels, Humor \n15. Opposition to Woman Suffrage \n16. Scrapbooks \nThe Rare Book Division has maintained the collection according to NAWSA's original organization, and researchers can request items by using the same numbers assigned in the Deed of Gift. When the cataloging of the collection began, it was renamed from its original title of the Carrie Chapman Collection to its current name as the NAWSA Collection--a title that more accurately identifies the collection's contents. \nThis online selection was based on a number of user groups in mind: students at both the high school and college levels interested in developing a basic understanding of the suffrage movement; teachers of courses at these levels; and advanced scholars engaged in research. In all cases, materials were selected that  best represented the NAWSA organization and its place in the woman suffrage campaign. \nUsers should note that the collection mirrors the biases of NAWSA's membership. For the most part, it represents the concerns of well-educated, middle- and upper-class white women living in the North, and especially in New England. There is little in the collection to document the role of Southern women or women of color. Working-class women receive a slightly larger share of attention, but, for the most part, the collection details the experiences of the affluent white women who formed the suffrage campaign's leadership cadre. \nMore information about this collection is available at the digital collection homepage (https://www.loc.gov/collections/national-american-woman-suffrage-association/about-this-collection/). \nThe data was created by harvesting the MODS XML records through each collection's API and crosswalking selected elements to a tabular format using Python scripts at https://github.com/saverkamp/loc-talk-2017/tree/master/womens-suffrage-collections-data/scripts.",
+  "contributors": [
+    {
+      "title": "Shawn Averkamp",
+      "email": "shawnaverkamp@nypl.org",
+      "path": "http://github.com/saverkamp",
+      "role": "author"
+    }
+  ],
+  "created": "2017-11-06T16:30:40+00:00",
+  "resources": [
+    {
+      "name": "womens-suffrage-collections-at-nypl-and-library-of-congress",
+      "description": "Data for digitized items represented in NYPL and Library of Congress collections on women's suffrage.",
+      "path": "https://github.com/saverkamp/loc-talk-2017/womens-suffrage-collections-data/womens_suffrage_collections.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": "mods2csv-suffrage-schema",
+      "bytes": 327957,
+      "schema": {
+        "fields": [
+        {
+         "name" : "source",
+         "title": "Source",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "The institutional owner of the item. 'NYPL' or 'LoC.'"
+        },
+              {
+         "name" : "primary-id",
+         "title": "Primary ID",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "The primary identifier for the digitized item, unique to the source institution."
+        },
+              {
+         "name" : "title",
+         "title": "Title",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "The primary title for the item."
+        },
+              {
+         "name" : "alternative-title",
+         "title": "Alternative title",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of additional titles for the item."
+        },
+              {
+         "name" : "contributor",
+         "title": "Contributor",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of persons or organizations that contributed to the creation of the content. Names are usually taken from Library of Congress Name Authority File."
+        },
+              {
+         "name" : "abstract",
+         "title": "Abstract",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A summary or description of the content."
+        },
+              {
+         "name" : "date",
+         "title": "Date",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of dates or date ranges related to the creation of the content."
+        },
+              {
+         "name" : "genre",
+         "title": "Genre",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of terms describing the nature of the content."
+        },
+              {
+         "name" : "topical-subject",
+         "title": "Topical subject",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of topical terms describing the content. Terms are usually taken from LCSH and may have been part of complex subject headings."
+        },
+              {
+         "name" : "name-subject",
+         "title": "Name subject",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of persons or organizations the content depicts or contains. Terms are usually taken from LC Name Authority File and may have been part of complex subject headings."
+        },
+              {
+         "name" : "geographic-subject",
+         "title": "Geographic subject",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of places related to the content. Terms are usually taken from LCSH and may have been part of complex subject headings."
+        },
+              {
+         "name" : "title-subject",
+         "title": "Title subject",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of works the content is about. Terms may have been part of complex subject headings."
+        },
+              {
+         "name" : "temporal-subject",
+         "title": "Temporal subject",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of time periods describing the content. Terms may have been part of complex subject headings."
+        },
+              {
+         "name" : "type-of-resource",
+         "title": "Type of resource",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "A pipe-delimited list of terms that specify the characteristics and general type of content of the resource. Terms taken from the MODS controlled vocabulary for type of resource."
+        },
+              {
+         "name" : "place-of-publication",
+         "title": "Place of publication",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of places related to the publication, distribution, or manufacture of the item."
+        },
+        {
+         "name" : "publisher",
+         "title": "Publisher",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of names related to the publication, distribution, or manufacture of the item."
+        },
+              {
+         "name" : "form",
+         "title": "Form",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of terms describing the physical format of the item."
+        },
+              {
+         "name" : "extent",
+         "title": "Extent",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of statements describing the size, length, or duration of the item."
+        },
+              {
+         "name" : "notes",
+         "title": "Notes",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of notes related to the content or physical condition of the item or content."
+        },
+              {
+         "name" : "link",
+         "title": "Link",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "A URL pointing to the item's corresponding webpage at the source institution's digital collections website."
+        },
+              {
+         "name" : "image",
+         "title": "Image",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "A URL pointing to a medium-sized image of the first page of the item."
+        }]
+      }
+    }
+  ]
+}
