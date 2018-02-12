@@ -1,6 +1,7 @@
 # Beyond Open Data 
 
-Prepared for Code4lib 2018.
+Prepared for Code4lib 2018.  
+More information: [http://2018.code4lib.org/talks/beyond-open-data](http://2018.code4lib.org/talks/beyond-open-data)  
 
 This repository contains: 
 
@@ -8,7 +9,7 @@ This repository contains:
 - DataGuide(.md)
 - Slides(.html)
 - CarePackages / a folder with experiments, tools, and other inspiration
-- Data Package Examples / a folder with examples(.json)
+- DataPackageExamples / a folder with examples(.json)
 
 # Talk Outline 
 

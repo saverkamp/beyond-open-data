@@ -139,13 +139,14 @@ For data that is very large and unwieldy, consider containerizing the entire pac
 
 ### Publicity
 
-*If a tree falls in the forest but no one is around to hear it, does it make a sound?*
+*If a tree falls in the forest but no one is around to hear it, does it make a sound?*  
 
 If you release your data but don't tell anyone about it… no one will be able to use or benefit from it! Plan a public outreach strategy around your dataset and coordinate with your public relations department, when possible. At the very least, add clear definitions and links to your data packages available on your institution's website.
 
 ### Redundancy 
 
-*LOCKSS: Lots of copies keeps stuff safe.* 
+*LOCKSS: Lots of copies keeps stuff safe.*   
+
 Are we treating the data of our collections with the same respect as the collections themselves? Where are you storing your data *and* where *else* are you storing your data? Data packages also need to be stored securely in multiple locations.
 
 The Internet Archive is a good place to store data packages in addition to trusting your institution to care for the material long-term. It can handle the uploading of large files and is easily accessible by the general public.
@@ -176,13 +177,13 @@ Strongly consider publishing a version of your data in CSV, so it can be used by
 
 ### Tools
 
-[Datasette](https://github.com/simonw/datasette): An instant JSON API for SQLite databases.
-[Frictionless Data](https://frictionlessdata.io/specs/): a containerization format for any kind of data based on existing practices for publishing open-source software.
-[mira](https://github.com/davbre/mira): A simple HTTP API for CSV files.
-[sheetsee.js](https://github.com/jlord/sheetsee.js): A client-side library for connecting Google Spreadsheets to a website and visualizing the information with tables and charts.
+[Datasette](https://github.com/simonw/datasette): An instant JSON API for SQLite databases.  
+[Frictionless Data](https://frictionlessdata.io/specs/): a containerization format for any kind of data based on existing practices for publishing open-source software.  
+[mira](https://github.com/davbre/mira): A simple HTTP API for CSV files.  
+[sheetsee.js](https://github.com/jlord/sheetsee.js): A client-side library for connecting Google Spreadsheets to a website and visualizing the information with tables and charts.  
 
 ## Credits
 
-[Shawn Averkamp](https://github.com/saverkamp/)
-[Ashley Blewer](https://github.com/ablwr/)
-[Matt Miller](https://github.com/thisismattmiller/)
+[Shawn Averkamp](https://github.com/saverkamp/)  
+[Ashley Blewer](https://github.com/ablwr/)  
+[Matt Miller](https://github.com/thisismattmiller/)  
