@@ -1,0 +1,192 @@
+{
+        "fields": [
+        {
+         "name" : "source",
+         "title": "Source",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "The institutional owner of the item ('NYPL').'"
+        },
+              {
+         "name" : "primary-id",
+         "title": "Primary ID",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "The UUID (primary identifier) for the digitized item."
+        },
+              {
+         "name" : "title",
+         "title": "Title",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "The primary title for the item."
+        },
+              {
+         "name" : "alternative-title",
+         "title": "Alternative title",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of additional titles for the item."
+        },
+              {
+         "name" : "contributor",
+         "title": "Contributor",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of persons or organizations that contributed to the creation of the content. Names are usually taken from Library of Congress Name Authority File."
+        },
+              {
+         "name" : "abstract",
+         "title": "Abstract",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A summary or description of the content."
+        },
+              {
+         "name" : "date",
+         "title": "Date",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of dates or date ranges related to the creation of the content."
+        },
+              {
+         "name" : "genre",
+         "title": "Genre",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of terms describing the nature of the content."
+        },
+              {
+         "name" : "topical-subject",
+         "title": "Topical subject",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of topical terms describing the content. Terms are usually taken from LCSH and may have been part of complex subject headings."
+        },
+              {
+         "name" : "name-subject",
+         "title": "Name subject",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of persons or organizations the content depicts or contains. Terms are usually taken from LC Name Authority File and may have been part of complex subject headings."
+        },
+              {
+         "name" : "geographic-subject",
+         "title": "Geographic subject",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of places related to the content. Terms are usually taken from LCSH and may have been part of complex subject headings."
+        },
+              {
+         "name" : "title-subject",
+         "title": "Title subject",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of works the content is about. Terms may have been part of complex subject headings."
+        },
+              {
+         "name" : "temporal-subject",
+         "title": "Temporal subject",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of time periods describing the content. Terms may have been part of complex subject headings."
+        },
+              {
+         "name" : "type-of-resource",
+         "title": "Type of resource",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "A pipe-delimited list of terms that specify the characteristics and general type of content of the resource. Terms taken from the MODS controlled vocabulary for type of resource."
+        },
+              {
+         "name" : "place-of-publication",
+         "title": "Place of publication",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of places related to the publication, distribution, or manufacture of the item."
+        },
+        {
+         "name" : "publisher",
+         "title": "Publisher",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of names related to the publication, distribution, or manufacture of the item."
+        },
+              {
+         "name" : "form",
+         "title": "Form",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of terms describing the physical format of the item."
+        },
+              {
+         "name" : "extent",
+         "title": "Extent",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of statements describing the size, length, or duration of the item."
+        },
+              {
+         "name" : "notes",
+         "title": "Notes",
+         "type": "string",
+         "constraints": {
+            "required": false
+          },
+         "description": "A pipe-delimited list of notes related to the content or physical condition of the item or content."
+        },
+              {
+         "name" : "link",
+         "title": "Link",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "A URL pointing to the item's corresponding webpage in Digital Collections."
+        },
+              {
+         "name" : "image",
+         "title": "Image",
+         "type": "string",
+         "constraints": {
+            "required": true
+          },
+         "description": "A URL pointing to a medium-sized image of the first page of the item."
+        }]
+      }
