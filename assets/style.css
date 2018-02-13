@@ -24,3 +24,18 @@ h1 {
 .remark-container img {
   max-width: 800px;
 }
+
+#grid9 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+#grid9 div:nth-child(odd) {
+  color: navy;
+}
+
+#grid9 div:nth-child(even) {
+  color: darkred;
+}
