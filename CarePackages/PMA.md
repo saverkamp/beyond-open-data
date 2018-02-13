@@ -19,3 +19,5 @@ Understand that I am not trying to bring up problems, and my comments are not me
 - Documentation. I like that the out-of-the-box API framework provides all of the endpoints with which one could reach their data. I like that I can retrieve images of different kinds. What was lacking was information about the scope of the collections and what is appearing here (from smashing, they all seem to be from the same collection, and they are similar in style).
 
 - Explorer. The API framework comes with an explorer tool so I can test out API calls right in my browser without having to set things up and deal with raw JSON data, reducing clumsiness and letting me get what I want more quickly, which is an understanding of what kind of data I can see and how I can grab it. 
+
+- Low Hanging Fruit. As a casual data-consumer, I went with the quickest and easiest way to start building because I didn't want to spend a lot of time figuring out what is even in a dataset, much less how to use it or take on learning all of this new stuff for a single-use application (for the purpose of a talk).
