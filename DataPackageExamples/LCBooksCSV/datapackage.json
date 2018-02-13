@@ -1,0 +1,453 @@
+{
+    "title": "Library of Congress MARC as CSV",
+    "name": "library-of-congress-marc-as-csv",
+    "description": "The Library of Congress MARC book records from http://www.loc.gov/cds/products/marcDist.php mapped to CSV by Matt Miller.",
+    "homepage": "https://github.com/thisismattmiller/lc-sqlite",
+    "profile": "tabular-data-package",
+    "contributors": [{
+        "title": "Matt Miller",
+        "path": "http://github.com/thisismattmiller",
+        "role": "author"
+    }],
+    "resources": [
+        {
+            "path": "https://s3.amazonaws.com/lc-sqlite/lc_books_subjects.csv.gz#lc_books_subjects.csv",
+            "profile": "tabular-data-resource",
+            "description": "Library of Congress books by subject heading. ",
+            "encoding": "utf-8",
+            "name": "lc_books_subjects",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "description": "The type of subject in the 'label' field describing the book: person, coporate, event, genre, place, title, topic, or uncontrolled.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "name": "lccn",
+                        "type": "integer",
+                        "description": "The Library of Congress Call Number of the book.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "source": ["010a"]
+                    },
+                    {
+                        "name": "isbn",
+                        "type": "string",
+                        "description": "The ISBN of the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["020a"]
+                    },
+                    {
+                        "name": "pub_date",
+                        "type": "integer",
+                        "description": "The 4-digit year of publication.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["008/7-11"]
+                    },
+                    {
+                        "name": "title",
+                        "type": "string",
+                        "description": "The title of the book.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "source": ["245a"]
+                    },
+                    {
+                        "name": "subtitle",
+                        "type": "string",
+                        "description": "The subtitle of the book, if available.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["245b"]
+                    },
+                    {
+                        "name": "label",
+                        "type": "string",
+                        "description": "The subject term describing the book.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "source": ["600a", "610a", "611a", "630a", "647a", "648a", "650a", "651a", "653a", "654a", "655a", "656a", "657a", "658a", "662a"]
+                    },
+                    {
+                        "name": "numeration",
+                        "type": "string",
+                        "description": "A Roman numeral alone or a Roman numeral and a subsequent part of a forename.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["600b", "662c"]
+                    },
+                    {
+                        "name": "sub_label",
+                        "type": "string",
+                        "description": "A sublabel associated with a subject.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["600c", "610b", "611e", "650b", "654b", "655b", "656k", "658b", "662b"]
+                    },
+                    {
+                        "name": "event_dates",
+                        "type": "string",
+                        "description": "An event data assocated with a subject.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["611d", "647d"]
+                    },
+                    {
+                        "name": "date_of_work",
+                        "type": "string",
+                        "description": "A work date associated with a subject.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["600f", "610f", "611f", "630f"]
+                    },
+                    {
+                        "name": "location",
+                        "type": "string",
+                        "description": "An event location associated with the subject.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["610c", "611c", "647c", "650c", "662d"]
+                    },
+                    {
+                        "name": "form",
+                        "type": "string",
+                        "description": "A form or genre associated with the subject.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["600v", "610v", "611v", "630v", "647v", "648v", "650v", "651v", "654v", "655v", "656v", "657v"]
+                    },
+                    {
+                        "name": "general",
+                        "type": "string",
+                        "description": "A subtopic associated with the subject.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["600x", "610x", "611x", "630x", "647x", "648x", "650x", "651x", "655x", "656x", "657x"]
+                    },
+                    {
+                        "name": "chronological",
+                        "type": "string",
+                        "description": "A chronological period associated with the subject.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["600y", "610y", "611y", "630y", "647y", "648y", "650y", "651y", "655y", "656y", "657y"]
+                    },
+                    {
+                        "name": "geographic",
+                        "type": "string",
+                        "description": "A geographic location associated with the subject.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["600z", "610z", "611z", "630z", "647z", "648z", "650z", "651z", "655z", "656z", "657z"]
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        },
+        {
+            "path": "https://s3.amazonaws.com/lc-sqlite/lc_books_titles.csv.gz#lc_books_titles.csv",
+            "profile": "tabular-data-resource",
+            "encoding": "utf-8",
+            "name": "lc_books_titles",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "lccn",
+                        "type": "integer",
+                        "description": "The Library of Congress call number for the book.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "source": ["010a"]
+                    },
+                    {
+                        "name": "isbn",
+                        "type": "string",
+                        "description": "The ISBN of the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["020a"]
+                    },
+                    {
+                        "name": "issn",
+                        "type": "string",
+                        "description": "The ISSN of a serial.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["022a"]
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "description": "The material type of the book: book, map, serial, or visual.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        }
+                    },
+                    {
+                        "name": "date",
+                        "type": "integer",
+                        "description": "The 4-digit year of the publication or creation of the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["008/07-11"]
+                    },
+                    {
+                        "name": "language",
+                        "type": "string",
+                        "description": "The language of the content of the book. Represented by 3-character codes from MARC Languages codes (https://www.loc.gov/marc/languages/). If multiple languages are present, the codes are concatenated into one string.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["041a"]
+                    },
+                    {
+                        "name": "language_orginal",
+                        "type": "string",
+                        "description": "The language of the original (if the book is a translation).",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["041h"]
+                    },
+                    {
+                        "name": "lcc_class",
+                        "type": "string",
+                        "description": "The Library of Congress classification of the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["050a"]
+                    },
+                    {
+                        "name": "lcc_item",
+                        "type": "string",
+                        "description": "The Library of Congress classification item number.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["050b"]
+                    },
+                    {
+                        "name": "title",
+                        "type": "string",
+                        "description": "The title of the book.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "source": ["245a"]
+                    },
+                    {
+                        "name": "subtitle",
+                        "type": "string",
+                        "description": "The subtitle of the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["245b"]
+                    },
+                    {
+                        "name": "title_sor",
+                        "type": "string",
+                        "description": "The statement of responsibility (ex. author, editor) for the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["245c"]
+                    },
+                    {
+                        "name": "publication_place",
+                        "type": "string",
+                        "description": "The place of publication of the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["260a"]
+                    },
+                    {
+                        "name": "publication_name",
+                        "type": "string",
+                        "description": "The publisher of the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["260b"]
+                    },
+                    {
+                        "name": "publication_date",
+                        "type": "number",
+                        "description": "The publication date listed on the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["260c"]
+                    },
+                    {
+                        "name": "creator",
+                        "type": "string",
+                        "description": "The author or creator of the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["100abc", "110abc", "111abc", "130a"]
+                    },
+                    {
+                        "name": "creator_date_start",
+                        "type": "integer",
+                        "description": "The birthdate or origin date of the creator.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["100d", "110d", "111d"]
+                    },
+                    {
+                        "name": "creator_date_end",
+                        "type": "integer",
+                        "description": "The death date or end date of the creator.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["100d", "110d", "111d"]
+                    },
+                    {
+                        "name": "physical_extent",
+                        "type": "string",
+                        "description": "The physical extent of the book (ex. pages, volumes).",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["300a"]
+                    },
+                    {
+                        "name": "physical_details",
+                        "type": "string",
+                        "description": "The physical details of the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["300b"]
+                    },
+                    {
+                        "name": "physical_dimensions",
+                        "type": "string",
+                        "description": "The dimensions of the book (ex. height).",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["300c"]
+                    },
+                    {
+                        "name": "contributors",
+                        "type": "string",
+                        "description": "Contributors to the creation of the book, other than the creator.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["700abcd", "710abcd", "711abcd", "720a", "730a", "740a", "751a", "752a"]
+                    },
+                    {
+                        "name": "notes",
+                        "type": "string",
+                        "description": "Notes about the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["5xx"]
+                    },
+                    {
+                        "name": "subjects",
+                        "type": "string",
+                        "description": "The subjects of the book.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["6xx"]
+                    },
+                    {
+                        "name": "links",
+                        "type": "string",
+                        "description": "Links to an electronic version or supplementary electronic resource.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "source": ["856u"]
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        }
+    ]
+}
