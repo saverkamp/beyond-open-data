@@ -1,7 +1,7 @@
 {
     "title": "Library of Congress MARC as CSV",
     "name": "library-of-congress-marc-as-csv",
-    "description": "The Library of Congress MARC book records from http://www.loc.gov/cds/products/marcDist.php mapped to CSV by Matt Miller.",
+    "description": "The Library of Congress MARC book records from http://www.loc.gov/cds/products/marcDist.php mapped to CSV by Matt Miller. Code for mapping the data can be found at https://github.com/thisismattmiller/lc-sqlite. One dataset represents records by title and another by subjects, one row per record subject.",
     "homepage": "https://github.com/thisismattmiller/lc-sqlite",
     "profile": "tabular-data-package",
     "contributors": [{
