@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/style.css">
   </head>
   <body>
-    <img src="assets/images/matt.gif" id="matt"></div>
+    <img src="assets/images/matt-slow.gif" id="matt"></div>
     <textarea id="source">
 ---
 class: center, middle
@@ -47,9 +47,9 @@ So why do this?  I don’t think we have a good answer yet to the why, but we kn
 
 ---
 # Barriers to entry
-* JSON? XML? MARC??? No way!
-* What even is MODS?
-* What am I looking at? Where did this come from? Why should I care about this?
+## * JSON? XML? MARC??? No way!
+## * What even is MODS?
+## * What am I looking at? Where did this come from? Why should I care about this?
 
 ???
 
@@ -66,6 +66,7 @@ There’s not enough context around datasets of collections or documentation hel
 ## .right[ 🐶 People who are neither  ]
 
 ???
+(Ashley)
 So, who cares? Or a better question to ask, then, is: 
 Who should care? Me, you, us, we care, sure, but it is also our stuff, and our field, and we are obliged to these things because it is a core value to our careers and it is our mission to serve. 
 
@@ -78,6 +79,7 @@ Who should care? Me, you, us, we care, sure, but it is also our stuff, and our f
 ## .right[ 🤠 Public ]
 
 ???
+(Ashley)
 But who would care? Other people who also care or should care are institutions (yours and others), researchers, other librarians (again, yours and others), Digital Humanities people, educators and their students, and general consumers, people who just want to explore. For example, Hackathon participants who want to engage in a project and have fun writing code in a group but need something solid and practical to work on during a short period of time. They can benefit from this data. I think it's important to have an understanding of the types of people who might be interested in your data but also open to the idea and aware that you can't know all the potential use cases for your data. 
 
 So considering all of these reasons not to care, for this project we decided we wanted to experiment with some open datasets to learn more about how to get people to care, including ourselves. 
@@ -94,7 +96,7 @@ class: center, middle
 ![](assets/images/lc-lists.gif)
 
 ???
-
+(Ashley)
 I'll start with a project Matt worked on, so I'll be representing him and his work here. Matt wanted to work with Library of Congress's MARC data and think about how it could be released in a more broadly user-friendly data format. With the data available not as raw MARC but as a table, database, or CSV, it could be easier for people to understand a dataset, and the data could be explored more easily. 
 
 ---
@@ -104,7 +106,7 @@ I'll start with a project Matt worked on, so I'll be representing him and his wo
 ![](assets/images/mm2.png)
 
 ???
-
+(Ashley)
 BTW Matt is great, he's been doing a lot of interesting work with this data over the past few months since it was released, thank you Library of Congress for putting this data out there.
 
 ---
@@ -114,7 +116,7 @@ BTW Matt is great, he's been doing a lot of interesting work with this data over
 
 
 ???
-
+(Ashley)
 Some more stuff you can find online. 
 
 ---
@@ -123,7 +125,7 @@ class: middle, center
 ![](assets/images/darkpatterns.jpg)
 
 ???
-
+(Ashley)
 I feel like I didn't initially appreciate the work Matt had been doing in this department until I went to check out some of the public data myself and ran into all these dark UX patterns pushing for me to buy the MARC for $20k, and only at the bottom is there a link to some links with the data split into 41 chunks -- not easy to access and no context.
 
 ---
@@ -133,7 +135,7 @@ Installing Datasette:
 ![](assets/images/datasette_install.gif)
 
 ???
-
+(Ashley)
 Anyway, after doing this mapping work (available online, link later), he used Datasette, a framework for building a sqlite database.
 
 ---
@@ -142,7 +144,7 @@ class: middle, center
 ![](assets/images/foucault.gif)
 
 ???
-
+(Ashley)
 Here's a gif of the result. The results are functional but Matt said the source data is maybe a little too big, 10million records, for proper use of this application. MARC data is complicated, but if you think about building your own database for a specific use case and releasing that as a data package, it makes thing much more manageable. Also, he says, this is a super cheap way of building an API. If you put indexes on everything you wanted and stay away from full text search you could totally setup some simple API endpoints for people to use.
 
 ---
@@ -152,7 +154,7 @@ Here's a gif of the result. The results are functional but Matt said the source 
 .center[![](assets/images/pma.gif)]
 
 ???
-
+(Ashley)
 OK, my turn. This study is a general attempt at finding data to build a small thing on top of. I took the lazy way out and came across the Philadelphia Museum of Art's ["hackathon"](https://hackathon.philamuseum.org/) page, which has been set up as a public-facing, experimental API. I appreciated the upfront-ness about this page, where it explicitly states that this is an experiment and that they are still in the early stages of infrastructure-building. "We're sharing our work-in-progress version of what could possibly become our collection data access layer with you." This is nice. 
 
 ---
@@ -160,6 +162,7 @@ class: middle, center
 ![](assets/images/explorer.jpg)
 
 ???
+(Ashley)
 The API framework comes with an explorer tool so I can test out API calls right in my browser without having to set things up and deal with raw JSON data, reducing clumsiness and letting me get what I want more quickly, which is an understanding of what kind of data I can see and how I can grab it. What's on display right now is what I initially used to grab up random images, but later I saw another API endpoint that retrieves data about everything currently on display at the museum (or at least at the time this API was created). This is cool, without this explorer or auto-generated documentation, I might not have known that endpoint existed.
 
 So to celebrate how nice this open access to data was, with a quick and easy-to-use API, and how much I appreciate the Philadelphia Museum of Art for making this stuff available to me, as a developer,  ...
@@ -172,6 +175,7 @@ class: middle, center
 ![](assets/images/smash.gif)
 
 ???
+(Ashley)
 I made this game about smashing up all the art currently on display in the museum. 
 
 The premise of the game is simple (some could say... contrived). You are an Eagle avatar and the goal of the game is to smash up all the art in the museum because you are *extremely* excited about the Superbowl.
@@ -189,7 +193,7 @@ class: middle, center
 ![](assets/images/pma3.jpg)
 
 ???
-
+(Ashley)
 So this is an example of the kind of things people could do with YOUR data. Um, but for real, when I was thinking about this talk and building on data, I immediately went with the thing that provided me with the quickest and most understandable access. For me, it's an API. For others, it might be a CSV. 
 
 I'm gonna pass this back over to Shawn to talk about the work her and others have done on the data caretaker front.
@@ -280,8 +284,8 @@ A few things I learned from these conversations and experiences were that we sho
 .center[![](assets/images/guide.jpg)]
 
 ???
-
-So there's lot more we can say about this, and we did, and put it all in this github repo.We put together a data care guide for creating datasets that more people with different skill levels can use and that will work with existing applications and tools. It can help you when releasing datasets, or help you advocate within your institution while planning data packages. 
+(Ashley)
+So there's lot more we can say about this, and we did, and put it all in this github repo. We put together a data care guide for creating datasets that more people with different skill levels can use and that will work with existing applications and tools. It can help you when releasing datasets, or help you advocate within your institution while planning data packages. 
 
 ---
 # Guide 
@@ -300,7 +304,7 @@ So there's lot more we can say about this, and we did, and put it all in this gi
 
 
 ???
-
+(Ashley)
 This guide goes into the above issues of who cares about data packages and why you should care about them. It also gives recommendations based in the follow NINE categories: Consistency, Context, Licensing, Planning, Portability, Publicity, Redundancy, Reproducibility, and Simplicity.
 
 ---
