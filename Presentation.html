@@ -19,8 +19,7 @@ Ashley Blewer
 
 ???
 
-Hi Everyone! I'm Shawn and this is Ashley, and here in the corner is Matt Miller, who couldn't join us in person today because he had to go talk about open data in Australia. So we all used to work together at a big public library in New York and because we really liked working together, we decided we wanted to propse a project for Code4Lib. Our library had done some innovative work over the years in creating and releasing open data sets and we had each played some role in creating open data, publishing it, documenting it, and even reusing and remixing it. At the end of those projects, the data was left live on third-party servers, so we thought maybe we would try packaging it all up and depositing it at the Internet Archive or somewhere else more secure and discoverable. But as we starting talking about the work of packaging and saving it, we thought about how few people have actually used open data, ours or other institutions (I mean, really, who is doing anything with this data?) 
-
+Hi Everyone! I'm Shawn and this is Ashley, and here in the corner is Matt Miller, who couldn't join us in person today because he had to go talk about open data in Australia. So we all used to work together at a big public library in New York and because we really liked working together, we decided we wanted to propose a project for Code4Lib. This library had done some really innovative work over the years in creating and releasing open data sets and we had each played some role in creating open data, publishing it, documenting it, and even reusing and remixing it. But at the end of those projects, the data was left live on third-party servers, so we thought maybe we would try packaging it all up and depositing it at the Internet Archive or somewhere else more secure and discoverable. But as we starting talking about the work of packaging and saving it, we started thinking about how few people have actually _used_ open data.
 ---
 class: center, middle
 
@@ -30,12 +29,12 @@ class: center, middle
 
 ???
 (Shawn)
- and we started feeling like “who cares?” Why bother? Why do we all publish this stuff when no one has ever told us their data saved their life? Sure it makes for a good press release, and it's a noble enough aim to require it for a grant, but  I mean, how many of you have done anything with open data? How many of you want to but don’t know how to start? How many of you don’t know if you want to because you don’t know what open datasets are available or what’s in them?. So that really left us at a loss for what to do for this talk, which should really be called Open Data: Who Cares? But you all voted for us, so we had to come up with some reasons to care, and here’s what we got. 
+ and we started feeling like “who cares?” Why bother? Why do we all publish this stuff? Sure it makes for a good press release, and it's a noble enough aim to require it for a grant, but  I mean, how many of you have done anything with open data? How many of you want to but don’t know how to start? How many of you don’t know if you want to because you don’t know what open datasets are available or what’s in them?. So that really left us at a loss for what to do for this talk. But you all voted for us, so we had to come up with some reasons to care, and here’s what we got. 
 
 ---
 # .center[ 😔😔😔 ]
 
-# Why care? 
+# .center[Why care?] 
 
 # .center[ 😔😔😔 ]
 
@@ -43,7 +42,7 @@ class: center, middle
 
 ???
 
-So why do this?  I don’t think we have a good answer yet to the why, but we know that as a profession, we haven’t given open data a fair chance for reuse because we haven’t given it the care and thought that we give our other library projects, like websites, catalogs, digitization, digital humanities projects, digital preservation. But I can tell you why people don't care. 
+So why do this?  I don’t think we have a good answer yet to the why, but we know that as a profession, we haven’t given open data a fair chance for reuse because we haven’t given it the care and thought that we give our other library projects, like websites, catalogs, digitization, digital humanities projects, or digital preservation. But I can tell you why people don't care. 
 
 ---
 # Barriers to entry
@@ -53,9 +52,9 @@ So why do this?  I don’t think we have a good answer yet to the why, but we kn
 
 ???
 
-Many of our data formats are hard to work with. If it’s not in CSV and can’t be opened in a spreadsheet, most people aren’t going to be able to explore it or work with it.
-Our library standards are incomprehensible to many people outside libraries (and to many people inside libraries).
-There’s not enough context around datasets of collections or documentation helping people interpret it.
+1) Many of our data formats are hard to work with. If it’s not in CSV and can’t be opened in a spreadsheet, most people aren’t going to be able to explore it or work with it.
+2) Our library standards are incomprehensible to many people outside libraries (and to many people inside libraries).
+3) There’s not enough context around datasets of collections or documentation helping people interpret it.
 
 ---
 # Who cares? 
@@ -208,7 +207,7 @@ class: middle, center
 
 ???
 
-I'm a metadata librarian at the New York Public Library and I use our Digital Collections API a lot. I know lots of other people don't. I think mainly because it's hard to understand how to get at what you want and we use MODS XML to describe our items, which is incomprehensible and hard to parse for the layperson and also very difficult for many of us in the library to understand. It is great that we offer this data openly to the public, but it is definitely not a model for how to publish open data. 
+I'm a metadata librarian at the New York Public Library and I use our Digital Collections API a lot. I know lots of other people don't. I think mainly because it's hard to understand how to get at what you want, and we use MODS XML to describe our items, which is incomprehensible and hard to parse for the layperson, and it's also very difficult for many of us in the library to understand. It is great that we offer this data openly to the public, but it is definitely not a model for how to publish open data. 
 
 ---
 class: middle, center
@@ -244,7 +243,7 @@ class: middle, center
 
 ???
 
-Frictionless Data is an initiative and set of specifications maintained by Open Knowledge International. It's basically a container format for describing a dataset or a bunch of data files in a machine-actionable way. If you're familiar with Docker for software, it's kind of like that, but for data. It's not the only data package specification out there, but what I like about it is that there's a growing community around it and ton of tools for creating data packages, reading them, validating them, and analyzing them. I also like that there's a basic schema for interoperability purposes, but it's extensible, so I think there's a real opportunity for collaboratively creating data package schemas to suit library and cultural heritage needs. 
+Frictionless Data is an initiative and set of specifications maintained by Open Knowledge International. It's basically a container format for describing a dataset or a bunch of data files in a machine-actionable way. If you're familiar with Docker for software, it's kind of like that, but for data. It's not the only data package specification out there, but what I like about it is that there's a growing community around it and ton of tools for creating data packages, reading them, and analyzing them. I also like that there's a basic schema for interoperability purposes, but it's extensible, so I think there's a real opportunity for creating data package schemas to suit library and cultural heritage needs. 
 
 ---
 class: middle, center
@@ -254,7 +253,7 @@ class: middle, center
 
 ???
 
-So after helping Bert set up data packages for our SpaceTime Directory datasets, I wanted to try packaging up all of the other NYPL datasets we've created over the years for the projects that are no longer being maintained. 
+So after helping set up data packages for our SpaceTime Directory datasets, I wanted to try packaging up all of the other NYPL datasets we've created over the years for the projects that are no longer being maintained. 
 
 ---
 class: middle, center
@@ -264,7 +263,7 @@ class: middle, center
 
 ???
 
-I started with the datasets from our What's on the Menu crowdsourcing project because I thought it would easy, but it turned out to be a huge archaeology project and taught me a lot about what kind of documentation data producers could be keeping along the way to put us in a better place for publishing and sunsetting projects. 
+I started with the datasets from our What's on the Menu crowdsourcing project because I thought it would be easy, but it turned out to be a huge archaeology project and taught me a lot about what kind of documentation data producers could be keeping along the way to put us in a better place for publishing and sunsetting projects. 
 
 ---
 class: middle, center
@@ -276,7 +275,13 @@ class: middle, center
 
 Because so many people from the project were no longer around, I ended up talking to Katie Rawson and Trevor Munoz, who had documented all of their amazing investigations into deciphering and using this data, to get their insights into what they know about it and what they would have like to see published alongside the data to better understand it. I also relied heavily on the data dictionary they created, which gave me the idea to add source properties to my data package schemas to show the source of each field or the mapping. 
 
-A few things I learned from these conversations and experiences were that we should be getting librarians and curators more involved in helping provide information about the collections themselves, what's been digitized, what's missing, and even what ideas they have for reseach areas where these datasets might be valuable. One thing Katie and Trevor shared with me was that there's a real barrier to scholars using collections-as-data because it often hard to easily find datasets that will be a good fit-for-purpose, and if you can help make this more evident in your data documentation or make your dataset easier to explore, you might have a better shot at finding the right users for your data.
+A few things I learned from these conversations and experiences were that we should be getting librarians and curators more involved in helping provide information about the collections themselves, what's been digitized, what's missing, and even what ideas they have for reseach areas where these datasets might be valuable. One thing Katie and Trevor shared with me was that there's a real barrier to scholars using collections-as-data because it often hard to easily find datasets that will be a good fit-for-purpose, and if you can help make this more evident in your data documentation or make your dataset easier to explore, you might have a better shot at finding the right users for your data. 
+
+---
+# PUT AN OPEN LICENSE ON IT
+
+???
+One of the biggest takeaways, though, is that even with the best intentions probably you're not going to have the time or resources to add all of this documentation, so put an open license on your data, so at least someone else who cares about it can reformat it, repackage it and share it.
 
 ---
 # Guide 
