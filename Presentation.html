@@ -19,7 +19,7 @@ Ashley Blewer (@ablwr)
 
 ???
 
-Hi Everyone! I'm Shawn and this is Ashley, and here in the corner is Matt Miller, who couldn't join us in person today because he had to go talk about open data in Australia. So we all used to work together at a big public library in New York and because we really liked working together, we decided we wanted to propose a project for Code4Lib. This library had done some really innovative work over the years in creating and releasing open data sets and we had each played some role in creating open data, publishing it, documenting it, and even reusing and remixing it. But at the end of those projects, the data was left live on third-party servers, so we thought maybe we would try packaging it all up and depositing it at the Internet Archive or somewhere else more secure and discoverable. But as we starting talking about the work of packaging and saving it, we started thinking about how few people have actually _used_ open data.
+Hi Everyone! I'm Shawn and this is Ashley, and here in the corner is Matt Miller, who couldn't join us in person today because he had to go talk about open data in Australia. So we all used to work together at a big public library in New York and because we really liked working together, we decided we wanted to propose a project for Code4Lib. This library had done some really innovative work over the years in creating and releasing open data sets and we had each played some role in creating open data, publishing it, documenting it, and even reusing and remixing it. But at the end of those projects, the data was left live on third-party servers, so we thought that for this project maybe we would try packaging it all up and depositing it at the Internet Archive or somewhere else more secure and discoverable. But as we starting talking about the work of packaging and saving it, we started thinking about how few people have actually _used_ open data.
 ---
 class: center, middle
 
@@ -207,7 +207,7 @@ class: middle, center
 
 ???
 
-I'm a metadata librarian at the New York Public Library and I use our Digital Collections API a lot. I know lots of other people don't. I think mainly because it's hard to understand how to get at what you want, and we use MODS XML to describe our items, which is incomprehensible and hard to parse for the layperson, and it's also very difficult for many of us in the library to understand. It is great that we offer this data openly to the public, but it is definitely not a model for how to publish open data. 
+I'm a metadata librarian at the New York Public Library and I use our Digital Collections API a lot. I know lots of other people don't. I think mainly because it's hard to understand how to get at what you want, and we use MODS XML to describe our items, which is just really hard to understand. It is great that we offer this data openly to the public, but it is definitely not a model for how to publish open data. 
 
 ---
 class: middle, center
@@ -215,7 +215,7 @@ class: middle, center
 
 ???
 
-We also get a lot of requests for pulling down metadata or images for a specific collection, which is not straightforward at all, so I wanted to write something that would take a collection UUID, fetch the metadata and some image details for all of the items in that collection, and then map and flatten that to a CSV table schema, 
+We also get a lot of requests for pulling down metadata or images for a specific collection, which is not straightforward at all, so I wanted to write a Python script that would take a collection UUID, fetch the metadata and some image details for all of the items in that collection, and then map and flatten that to a CSV table schema, 
 
 ---
 class: middle, center
