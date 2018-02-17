@@ -7,7 +7,7 @@ This repository contains:
 
 - This README(.md) 
 - DataGuide(.md)
-- Slides(.html)
+- Presentation(.html)
 - CarePackages / a folder with experiments, tools, and other inspiration
 - DataPackageExamples / a folder with examples(.json)
 
