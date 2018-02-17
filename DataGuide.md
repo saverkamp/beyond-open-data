@@ -172,7 +172,8 @@ Strongly consider publishing a version of your data in CSV, so it can be used by
 
 ### People
 
-[Collections as Data](https://collectionsasdata.github.io/)
+* [Collections as Data](https://collectionsasdata.github.io/)
+* [Data Practices Manifesto](https://datapractices.org/manifesto/)
 
 ### Systems
 
